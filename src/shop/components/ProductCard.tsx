@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import type { Product, Size } from "@/interfaces/product.interface";
+import type { Size } from "@/interfaces/product.interface";
 
 interface ProductCardProps {
   name: string;
@@ -8,7 +8,7 @@ interface ProductCardProps {
   image: string;
   gender: string;
   sizes: Size[];
-  slug: string;
+  slug?: string;
 }
 
 export const ProductCard = ({
@@ -17,7 +17,6 @@ export const ProductCard = ({
   image,
   gender,
   sizes,
-  slug,
   // stock,
   // tags,
 }: ProductCardProps) => {
